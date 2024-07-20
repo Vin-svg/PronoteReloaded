@@ -1,4 +1,14 @@
-[gd_scene format=3 uid="uid://bybbgliwr555d"]
+[gd_scene load_steps=4 format=3 uid="uid://bybbgliwr555d"]
+
+[ext_resource type="Script" path="res://Scenes/Menu mode de jeux AMC.gd" id="1_8u4h4"]
+[ext_resource type="Theme" uid="uid://bjrncu1rigl6m" path="res://Assets/Themes/Blue_theme.tres" id="2_une6k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ij40m"]
+bg_color = Color(0.793937, 0.532906, 0.325513, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,3 +17,74 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8u4h4")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -414.0
+offset_top = -499.5
+offset_right = 414.0
+offset_bottom = 499.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ij40m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.5
+offset_top = -223.5
+offset_right = 215.5
+offset_bottom = 223.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 105
+
+[node name="Qcm" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 78.01)
+layout_mode = 2
+theme = ExtResource("2_une6k")
+theme_override_font_sizes/font_size = 56
+text = "QCM"
+
+[node name="Swipe" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 78.01)
+layout_mode = 2
+theme = ExtResource("2_une6k")
+theme_override_font_sizes/font_size = 56
+text = "Swipe"
+
+[node name="VraiFaux" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 78.01)
+layout_mode = 2
+theme = ExtResource("2_une6k")
+theme_override_font_sizes/font_size = 56
+text = "Vrai /  Faux"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 828.0
+offset_bottom = 189.0
+theme = ExtResource("2_une6k")
+theme_override_colors/font_shadow_color = Color(0.533037, 0.533037, 0.533037, 1)
+theme_override_font_sizes/font_size = 96
+text = "Select Your Mode !"
+horizontal_alignment = 1

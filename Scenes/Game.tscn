@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://blbsc6x55b8ph"]
+[gd_scene load_steps=7 format=3 uid="uid://blbsc6x55b8ph"]
 
 [ext_resource type="Theme" uid="uid://b02i0k4pkwsnq" path="res://Assets/Themes/XP_trans_pannel.tres" id="1_2310h"]
+[ext_resource type="Script" path="res://Scenes/Game.gd" id="1_nswbi"]
 [ext_resource type="Theme" uid="uid://bjrncu1rigl6m" path="res://Assets/Themes/Blue_theme.tres" id="2_bfncj"]
 [ext_resource type="Script" path="res://Scenes/AMC.gd" id="3_dhkj2"]
 [ext_resource type="VideoStream" path="res://Background vid/26041-355469036_small.ogv" id="3_n3pqb"]
@@ -15,8 +16,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nswbi")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(540, 1200)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
 
 [node name="Character" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -167,3 +173,5 @@ volume_db = -80.0
 autoplay = true
 loop = true
 buffering_msec = 1000
+
+[connection signal="pressed" from="CanvasLayer/BoxContainer2/Panel/VBoxContainer/AMC" to="." method="_on_amc_pressed"]
