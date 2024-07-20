@@ -18,11 +18,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nswbi")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(540, 1200)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
+layer = 0
 
 [node name="Character" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -154,6 +151,7 @@ theme_override_font_sizes/font_size = 100
 text = "Options"
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
