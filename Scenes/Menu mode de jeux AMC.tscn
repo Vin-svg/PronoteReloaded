@@ -34,10 +34,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -414.0
-offset_top = -499.5
-offset_right = 414.0
-offset_bottom = 499.5
+offset_left = -459.0
+offset_top = -702.0
+offset_right = 449.0
+offset_bottom = 556.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ij40m")
@@ -78,6 +78,15 @@ theme = ExtResource("2_une6k")
 theme_override_font_sizes/font_size = 56
 text = "Vrai /  Faux"
 
+[node name="BacktoMenu" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("2_une6k")
+theme_override_font_sizes/font_size = 36
+text = "Back to menu"
+
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_top = 1.0
@@ -88,3 +97,5 @@ theme_override_colors/font_shadow_color = Color(0.533037, 0.533037, 0.533037, 1)
 theme_override_font_sizes/font_size = 96
 text = "Select Your Mode !"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="Panel/VBoxContainer/BacktoMenu" to="." method="_on_backto_menu_pressed"]
