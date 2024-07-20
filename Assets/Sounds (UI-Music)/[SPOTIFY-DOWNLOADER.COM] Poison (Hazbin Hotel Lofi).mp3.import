@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bq5dc2w0ci1i0"
+path="res://.godot/imported/[SPOTIFY-DOWNLOADER.COM] Poison (Hazbin Hotel Lofi).mp3-599f58dcfc0aafde7ac6b68d50e579fd.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds (UI-Music)/[SPOTIFY-DOWNLOADER.COM] Poison (Hazbin Hotel Lofi).mp3"
+dest_files=["res://.godot/imported/[SPOTIFY-DOWNLOADER.COM] Poison (Hazbin Hotel Lofi).mp3-599f58dcfc0aafde7ac6b68d50e579fd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
