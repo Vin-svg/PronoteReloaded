@@ -84,7 +84,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
 theme = ExtResource("2_une6k")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 50
 text = "Back to menu"
 
 [node name="Label" type="Label" parent="Panel"]
