@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://blbsc6x55b8ph"]
 
-[ext_resource type="Theme" uid="uid://b02i0k4pkwsnq" path="res://XP_trans_pannel.tres" id="1_2310h"]
+[ext_resource type="Theme" uid="uid://b02i0k4pkwsnq" path="res://Assets/Themes/XP_trans_pannel.tres" id="1_2310h"]
 [ext_resource type="Theme" uid="uid://bjrncu1rigl6m" path="res://Assets/Themes/Blue_theme.tres" id="2_bfncj"]
 [ext_resource type="VideoStream" path="res://Background vid/26041-355469036_small.ogv" id="3_n3pqb"]
 
