@@ -13,6 +13,12 @@ config_version=5
 config/name="Pronote Reloaded"
 run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/bg_color=Color(0.550186, 0.137889, 0.271904, 1)
+boot_splash/image="res://Assets/Textures/Transition.png"
+
+[autoload]
+
+AudioPlayer="*res://Global/audio_player.tscn"
 
 [display]
 

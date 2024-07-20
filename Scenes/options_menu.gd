@@ -7,12 +7,3 @@ func _on_backto_menu_pressed():
 
 
 
-var music_bus = AudioServer.get_bus_index("Music")
-
-func _on_volume_value_changed(value):
-	AudioServer.set_bus_volume_db(music_bus,value)
-	
-	if value == -30:
-		AudioServer.set_bus_mute(music_bus, true)
-	else: 
-		AudioServer.set_bus_mute(music_bus, false)

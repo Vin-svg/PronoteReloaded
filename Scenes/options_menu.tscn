@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjm0kb61xb27t"]
+[gd_scene load_steps=3 format=3 uid="uid://cjm0kb61xb27t"]
 
 [ext_resource type="Theme" uid="uid://bjrncu1rigl6m" path="res://Assets/Themes/Blue_theme.tres" id="1_hdt0d"]
 [ext_resource type="Script" path="res://Scenes/options_menu.gd" id="1_stt8x"]
-[ext_resource type="AudioStream" uid="uid://bq5dc2w0ci1i0" path="res://Assets/Sounds (UI-Music)/[SPOTIFY-DOWNLOADER.COM] Poison (Hazbin Hotel Lofi).mp3" id="3_7fay6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -78,11 +77,6 @@ offset_bottom = 683.0
 theme = ExtResource("1_hdt0d")
 theme_override_font_sizes/font_size = 36
 text = "Volume"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_7fay6")
-autoplay = true
-bus = &"Music"
 
 [connection signal="pressed" from="Panel2/BacktoMenu" to="." method="_on_backto_menu_pressed"]
 [connection signal="value_changed" from="Volume" to="." method="_on_volume_value_changed"]
