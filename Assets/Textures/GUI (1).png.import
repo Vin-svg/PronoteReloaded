@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvu57tasa6jfk"
-path="res://.godot/imported/Arrows and checks.png-c3ac65471ebe5d9bcc02fdf4fa0858eb.ctex"
+uid="uid://kkgcr6337tbw"
+path="res://.godot/imported/GUI (1).png-28772d49ffef9ab2c3fb033788bc8b82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Arrows and checks.png"
-dest_files=["res://.godot/imported/Arrows and checks.png-c3ac65471ebe5d9bcc02fdf4fa0858eb.ctex"]
+source_file="res://Assets/Textures/GUI (1).png"
+dest_files=["res://.godot/imported/GUI (1).png-28772d49ffef9ab2c3fb033788bc8b82.ctex"]
 
 [params]
 
