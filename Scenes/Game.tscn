@@ -1,0 +1,155 @@
+[gd_scene load_steps=6 format=3 uid="uid://blbsc6x55b8ph"]
+
+[ext_resource type="Theme" uid="uid://b02i0k4pkwsnq" path="res://XP_trans_pannel.tres" id="1_2310h"]
+[ext_resource type="Theme" uid="uid://lcopugeat0nm" path="res://Assets/Themes/Panel.tres" id="1_trw0o"]
+[ext_resource type="Theme" uid="uid://bjrncu1rigl6m" path="res://Assets/Themes/Blue_theme.tres" id="2_bfncj"]
+[ext_resource type="VideoStream" path="res://Background vid/26041-355469036_small.ogv" id="3_n3pqb"]
+
+[sub_resource type="Theme" id="Theme_0j8t8"]
+Button/styles/normal = null
+
+[node name="Start_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Character" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer/Character"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 91.0
+offset_top = 131.0
+offset_right = 959.0
+offset_bottom = 387.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_0j8t8")
+vertical = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/Character/BoxContainer"]
+custom_minimum_size = Vector2(68.685, 256.195)
+layout_mode = 2
+theme = ExtResource("1_2310h")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Character/BoxContainer/Panel2"]
+custom_minimum_size = Vector2(369.55, 113.71)
+layout_mode = 2
+offset_left = 228.0
+offset_top = 47.0
+offset_right = 597.55
+offset_bottom = 165.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 86
+text = "Lieeexxx"
+fit_content = true
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Character/BoxContainer"]
+
+[node name="BoxContainer2" type="BoxContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -491.0
+offset_top = -1748.0
+offset_right = 497.0
+offset_bottom = -419.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme = ExtResource("2_bfncj")
+vertical = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_bfncj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/BoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.5
+offset_top = -368.5
+offset_right = 250.5
+offset_bottom = 368.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="AMC" type="Button" parent="CanvasLayer/BoxContainer2/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("2_bfncj")
+theme_override_font_sizes/font_size = 131
+text = "AMC"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/BoxContainer2/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="French" type="Button" parent="CanvasLayer/BoxContainer2/Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("2_bfncj")
+theme_override_font_sizes/font_size = 60
+disabled = true
+text = "French *Coming soon*"
+
+[node name="NSI" type="Button" parent="CanvasLayer/BoxContainer2/Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("2_bfncj")
+theme_override_font_sizes/font_size = 60
+disabled = true
+text = "NSI *Coming soon*"
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+visible = false
+offset_left = 163.0
+offset_top = 553.0
+offset_right = 940.0
+offset_bottom = 1379.0
+theme = ExtResource("1_trw0o")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 840.0
+offset_top = -1398.0
+offset_right = 2760.0
+offset_bottom = -310.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(1.465, 1.465)
+stream = ExtResource("3_n3pqb")
+volume_db = -80.0
+autoplay = true
+loop = true
+buffering_msec = 1000

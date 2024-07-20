@@ -1,0 +1,57 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bjrncu1rigl6m"]
+
+[ext_resource type="FontFile" uid="uid://bhsrjud1gijos" path="res://Assets/RifficFree-Bold.ttf" id="1_nfm6o"]
+[ext_resource type="Texture2D" uid="uid://bxupkdjxoou3q" path="res://Assets/UI books & more.png" id="1_r6aq7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_thibk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gun3k"]
+bg_color = Color(0.571914, 0.377142, 0.101405, 1)
+border_width_bottom = 5
+border_color = Color(0.475633, 0.362659, 0.11045, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_color = Color(0.180005, 0.180005, 0.180005, 0.6)
+shadow_size = 4
+shadow_offset = Vector2(2.155, 4.025)
+anti_aliasing = false
+anti_aliasing_size = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oylpw"]
+bg_color = Color(0.514237, 0.280643, 0.0178861, 1)
+border_width_bottom = 5
+border_color = Color(0.482325, 0.304208, 1.92523e-07, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_color = Color(0.180005, 0.180005, 0.180005, 0.6)
+shadow_size = 4
+shadow_offset = Vector2(2.155, 4.025)
+anti_aliasing = false
+anti_aliasing_size = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_enyeu"]
+texture = ExtResource("1_r6aq7")
+
+[sub_resource type="FontFile" id="FontFile_mam3v"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[resource]
+default_font = SubResource("FontFile_mam3v")
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/icon_focus_color = Color(1, 1, 1, 0)
+Button/fonts/font = ExtResource("1_nfm6o")
+Button/styles/focus = SubResource("StyleBoxEmpty_thibk")
+Button/styles/hover = SubResource("StyleBoxFlat_gun3k")
+Button/styles/normal = SubResource("StyleBoxFlat_gun3k")
+Button/styles/pressed = SubResource("StyleBoxFlat_oylpw")
+Panel/styles/panel = SubResource("StyleBoxTexture_enyeu")
