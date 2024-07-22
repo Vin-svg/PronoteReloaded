@@ -8,6 +8,7 @@ drive = 1.0
 post_gain = -50.76
 
 [resource]
+bus/0/volume_db = -4.24723
 bus/0/effect/0/effect = SubResource("AudioEffectDistortion_53p8v")
 bus/0/effect/0/enabled = false
 bus/1/name = &"Music"
