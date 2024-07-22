@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bybbgliwr555d"]
+[gd_scene load_steps=5 format=3 uid="uid://bybbgliwr555d"]
 
 [ext_resource type="Script" path="res://Scenes/Menu mode de jeux AMC.gd" id="1_8u4h4"]
 [ext_resource type="Theme" uid="uid://bjrncu1rigl6m" path="res://Assets/Themes/Blue_theme.tres" id="2_une6k"]
+[ext_resource type="AudioStream" uid="uid://b6upo5qvq7pdr" path="res://Assets/Sounds (UI-Music)/Click.mp3" id="3_c10hp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ij40m"]
 bg_color = Color(0.793937, 0.532906, 0.325513, 1)
@@ -98,4 +99,11 @@ theme_override_font_sizes/font_size = 96
 text = "Select Your Mode !"
 horizontal_alignment = 1
 
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_c10hp")
+volume_db = -6.0
+autoplay = true
+
+[connection signal="pressed" from="Panel/VBoxContainer/Qcm" to="." method="_on_qcm_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Swipe" to="." method="_on_swipe_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/BacktoMenu" to="." method="_on_backto_menu_pressed"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfpn475c672xp"]
+
+[ext_resource type="Script" path="res://Scenes/QCM_script.gd" id="1_7f1di"]
+[ext_resource type="AudioStream" uid="uid://b6upo5qvq7pdr" path="res://Assets/Sounds (UI-Music)/Click.mp3" id="2_duap7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7f1di")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_duap7")
+volume_db = -6.242
+pitch_scale = 1.87
+autoplay = true

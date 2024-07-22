@@ -18,7 +18,7 @@ boot_splash/image="res://Assets/Textures/Transition.png"
 
 [autoload]
 
-AudioPlayer="*res://Global/audio_player.tscn"
+AudioPlayer="*res://Global/audio_player.gd"
 
 [display]
 
@@ -29,6 +29,12 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 window/handheld/orientation=1
 window/size/viewport_width.android=0
+
+[importer_defaults]
+
+animation_library={
+"animation/fps": 60.0
+}
 
 [rendering]
 

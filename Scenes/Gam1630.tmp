@@ -94,6 +94,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "HP"
 
+[node name="Strenght" type="Label" parent="Interface/GameUI/Stats/Attribute"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Strenght"
+
 [node name="Vitality" type="Label" parent="Interface/GameUI/Stats/Attribute"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
@@ -119,6 +124,12 @@ layout_mode = 2
 horizontal_alignment = 2
 
 [node name="HP" type="Label" parent="Interface/GameUI/Stats/Value"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 37.285)
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="Strenght" type="Label" parent="Interface/GameUI/Stats/Value"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 37.285)
 layout_mode = 2
