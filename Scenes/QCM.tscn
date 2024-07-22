@@ -17,3 +17,61 @@ stream = ExtResource("2_duap7")
 volume_db = -6.242
 pitch_scale = 1.87
 autoplay = true
+
+[node name="QuestionLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 283.0
+offset_right = 985.0
+offset_bottom = 491.0
+theme_override_font_sizes/font_size = 61
+
+[node name="AnswerButton1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 630.0
+offset_right = 800.0
+offset_bottom = 701.0
+theme_override_font_sizes/font_size = 20
+
+[node name="AnswerButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 711.0
+offset_right = 801.0
+offset_bottom = 782.0
+theme_override_font_sizes/font_size = 20
+
+[node name="AnswerButton3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 805.0
+offset_right = 801.0
+offset_bottom = 876.0
+theme_override_font_sizes/font_size = 20
+
+[node name="FeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 327.0
+offset_right = 988.0
+offset_bottom = 599.0
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -437.0
+offset_top = -813.5
+offset_right = 437.0
+offset_bottom = 813.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="AnswerButton1" to="." method="_on_answer_button_1_pressed"]
+[connection signal="pressed" from="AnswerButton2" to="." method="_on_answer_button_1_pressed"]
+[connection signal="pressed" from="AnswerButton3" to="." method="_on_answer_button_1_pressed"]
