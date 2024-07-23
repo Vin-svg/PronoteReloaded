@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://blbsc6x55b8ph"]
+[gd_scene load_steps=10 format=3 uid="uid://blbsc6x55b8ph"]
 
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_nswbi"]
 [ext_resource type="Theme" uid="uid://og4f1aht655" path="res://Assets/Themes/Red_theme.tres" id="2_vtf7h"]
@@ -7,6 +7,8 @@
 [ext_resource type="FontFile" uid="uid://d2lh30w2epf6t" path="res://Assets/fonts/Montserrat-Bold.ttf" id="5_w1oy5"]
 [ext_resource type="FontFile" uid="uid://1eqyoa2vypfq" path="res://Assets/fonts/Ubuntu-BoldItalic.ttf" id="6_hg8n3"]
 [ext_resource type="Texture2D" uid="uid://bvycynhyi6woe" path="res://Assets/Textures/account-icon.png" id="6_rapp6"]
+[ext_resource type="FontFile" uid="uid://bhsrjud1gijos" path="res://Assets/fonts/RifficFree-Bold.ttf" id="8_mcaoj"]
+[ext_resource type="VideoStream" path="res://Assets/Screen-Recording-2024-07-24-004445.ogv" id="9_jx4wn"]
 
 [node name="Start_menu" type="Control"]
 layout_mode = 3
@@ -20,83 +22,256 @@ script = ExtResource("1_nswbi")
 [node name="Interface" type="CanvasLayer" parent="."]
 layer = 0
 
-[node name="BoxContainer2" type="BoxContainer" parent="Interface"]
+[node name="Panel2" type="Panel" parent="Interface"]
+z_index = 1
+offset_left = 24.0
+offset_top = 486.0
+offset_right = 1188.0
+offset_bottom = 710.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vtf7h")
+
+[node name="Player Name" type="Label" parent="Interface/Panel2"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 1.0
+offset_right = 1096.0
+offset_bottom = 150.0
+theme = ExtResource("2_vtf7h")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("5_w1oy5")
+theme_override_font_sizes/font_size = 121
+text = "Player Name"
+
+[node name="Guild" type="Label" parent="Interface/Panel2"]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 139.0
+offset_right = 1099.0
+offset_bottom = 238.0
+theme = ExtResource("2_vtf7h")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("6_hg8n3")
+theme_override_font_sizes/font_size = 66
+text = "Guild : 1G2"
+
+[node name="Account-icon" type="Sprite2D" parent="Interface/Panel2"]
+position = Vector2(107.585, 113.545)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("6_rapp6")
+
+[node name="Panel3" type="Panel" parent="Interface"]
+z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -494.0
-offset_top = -664.5
-offset_right = 494.0
-offset_bottom = 664.5
+offset_left = -518.0
+offset_top = -1177.0
+offset_right = 518.0
+offset_bottom = -780.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-theme = ExtResource("2_vtf7h")
-vertical = true
-
-[node name="Panel" type="Panel" parent="Interface/BoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
 theme = ExtResource("2_vtf7h")
 
-[node name="AMC" type="Button" parent="Interface/BoxContainer2/Panel"]
-layout_direction = 1
-layout_mode = 2
-offset_left = 45.0
-offset_top = 321.0
-offset_right = 950.0
-offset_bottom = 682.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 6
-size_flags_stretch_ratio = 0.51
-theme = ExtResource("2_vtf7h")
-theme_override_font_sizes/font_size = 131
-text = "AMC"
-
-[node name="Click_sound" type="AudioStreamPlayer" parent="Interface/BoxContainer2/Panel/AMC"]
-stream = ExtResource("4_fun3d")
-volume_db = -6.0
-pitch_scale = 1.56
-autoplay = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Interface/BoxContainer2/Panel"]
+[node name="Label" type="Label" parent="Interface/Panel3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -449.0
-offset_top = 49.5
-offset_right = 456.0
-offset_bottom = 267.5
+offset_left = -399.0
+offset_top = -149.0
+offset_right = 399.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Interface/BoxContainer2/Panel/VBoxContainer"]
-layout_mode = 2
-
-[node name="French" type="Button" parent="Interface/BoxContainer2/Panel/VBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 8
 theme = ExtResource("2_vtf7h")
-theme_override_font_sizes/font_size = 60
-text = "French *Coming soon*"
+theme_override_fonts/font = ExtResource("8_mcaoj")
+theme_override_font_sizes/font_size = 123
+text = "EDUQUEST :"
+horizontal_alignment = 1
 
-[node name="NSI" type="Button" parent="Interface/BoxContainer2/Panel/VBoxContainer/VBoxContainer"]
-layout_mode = 2
+[node name="Label2" type="Label" parent="Interface/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = 4.0
+offset_right = 420.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_mcaoj")
+theme_override_font_sizes/font_size = 73
+text = "WORK ON YOUR SUCCESS "
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Interface"]
+z_index = -1
+y_sort_enabled = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -478.0
+offset_top = -455.0
+offset_right = 478.0
+offset_bottom = 1145.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
-size_flags_vertical = 8
+size_flags_vertical = 4
 theme = ExtResource("2_vtf7h")
-theme_override_font_sizes/font_size = 60
-text = "NSI *Coming soon*"
+
+[node name="AMC" type="Button" parent="Interface/Panel"]
+z_index = 2
+layout_direction = 1
+layout_mode = 2
+offset_left = 93.0
+offset_top = 42.0
+offset_right = 869.0
+offset_bottom = 403.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 6
+theme = ExtResource("2_vtf7h")
+theme_override_font_sizes/font_size = 131
+text = "AMC"
+
+[node name="Click_sound" type="AudioStreamPlayer" parent="Interface/Panel/AMC"]
+stream = ExtResource("4_fun3d")
+volume_db = -6.0
+pitch_scale = 1.56
+autoplay = true
+
+[node name="NSI" type="Button" parent="Interface/Panel"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -385.0
+offset_top = -1159.0
+offset_right = 391.0
+offset_bottom = -784.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+theme = ExtResource("2_vtf7h")
+theme_override_font_sizes/font_size = 131
+text = "NSI
+"
+
+[node name="Label" type="Label" parent="Interface/Panel/NSI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = 65.5
+offset_right = 174.0
+offset_bottom = 135.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 41
+text = "Coming soon ..."
+horizontal_alignment = 1
+
+[node name="French" type="Button" parent="Interface/Panel"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -385.0
+offset_top = 50.0
+offset_right = 391.0
+offset_bottom = 411.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 6
+theme = ExtResource("2_vtf7h")
+theme_override_font_sizes/font_size = 131
+text = "FRENCH"
+
+[node name="Coming soon" type="Label" parent="Interface/Panel/French"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = 67.5
+offset_right = 166.0
+offset_bottom = 147.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 41
+text = "Coming soon ..."
+horizontal_alignment = 1
+
+[node name="And more___" type="Button" parent="Interface/Panel"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -383.0
+offset_top = -368.0
+offset_right = 393.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 6
+theme = ExtResource("2_vtf7h")
+theme_override_font_sizes/font_size = 131
+text = "And more.."
+
+[node name="Label" type="Label" parent="Interface/Panel/And more___"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = 65.5
+offset_right = 174.0
+offset_bottom = 135.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 41
+text = "Coming soon ..."
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Interface/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="BoxContainer" type="BoxContainer" parent="Interface"]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -118,56 +293,32 @@ theme_override_font_sizes/font_size = 100
 text = "Options"
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+z_index = -1
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = -0.0037037
+anchor_right = 0.996296
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_dtn8k")
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 2
-offset_top = 198.0
-offset_right = 1076.0
-offset_bottom = 426.0
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_vtf7h")
+stream = ExtResource("9_jx4wn")
+autoplay = true
+expand = true
+loop = true
 
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 219.0
-offset_top = 1.0
-offset_right = 1096.0
-offset_bottom = 150.0
-theme = ExtResource("2_vtf7h")
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/shadow_outline_size = 7
-theme_override_fonts/font = ExtResource("5_w1oy5")
-theme_override_font_sizes/font_size = 121
-text = "Player Name"
-
-[node name="Label2" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 635.0
-offset_top = 139.0
-offset_right = 1099.0
-offset_bottom = 238.0
-theme = ExtResource("2_vtf7h")
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/shadow_outline_size = 7
-theme_override_fonts/font = ExtResource("6_hg8n3")
-theme_override_font_sizes/font_size = 66
-text = "Guild : 1G2"
-
-[node name="Account-icon" type="Sprite2D" parent="."]
-position = Vector2(107.585, 311.545)
-scale = Vector2(0.34, 0.34)
-texture = ExtResource("6_rapp6")
-
-[connection signal="pressed" from="Interface/BoxContainer2/Panel/AMC" to="." method="_on_amc_pressed"]
+[connection signal="pressed" from="Interface/Panel/AMC" to="." method="_on_amc_pressed"]
+[connection signal="pressed" from="Interface/Panel/NSI" to="." method="_on_amc_pressed"]
+[connection signal="pressed" from="Interface/Panel/French" to="." method="_on_amc_pressed"]
+[connection signal="pressed" from="Interface/Panel/And more___" to="." method="_on_amc_pressed"]
 [connection signal="pressed" from="Interface/BoxContainer/Options" to="." method="_on_options_pressed"]

@@ -42,6 +42,25 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_h7kms")
 
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -584.0
+offset_top = -837.0
+offset_right = 475.0
+offset_bottom = -685.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_h7kms")
+theme_override_colors/font_shadow_color = Color(0.533037, 0.533037, 0.533037, 1)
+theme_override_font_sizes/font_size = 96
+text = "GAME CATEGORIES"
+horizontal_alignment = 1
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
@@ -87,25 +106,6 @@ size_flags_stretch_ratio = 0.0
 theme = ExtResource("2_h7kms")
 theme_override_font_sizes/font_size = 55
 text = "Back to menu"
-
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -414.0
-offset_top = -837.0
-offset_right = 414.0
-offset_bottom = -685.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_h7kms")
-theme_override_colors/font_shadow_color = Color(0.533037, 0.533037, 0.533037, 1)
-theme_override_font_sizes/font_size = 96
-text = "Select Your Mode !"
-horizontal_alignment = 1
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Panel"]
 z_index = -1
