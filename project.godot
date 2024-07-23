@@ -10,11 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Pronote Reloaded"
+config/name="ÉduQuest"
+config/version="1"
 run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-boot_splash/bg_color=Color(0.550186, 0.137889, 0.271904, 1)
+boot_splash/bg_color=Color(0.54902, 0.137255, 0.270588, 0)
 boot_splash/image="res://Assets/Textures/Transition.png"
+config/icon="res://Assets/Éduquest_logo.png"
 
 [autoload]
 

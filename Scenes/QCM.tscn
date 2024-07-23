@@ -65,25 +65,25 @@ grow_vertical = 2
 theme_override_constants/separation = 149
 
 [node name="AnswerButton1" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 121.29)
+custom_minimum_size = Vector2(0, 187.74)
 layout_mode = 2
 theme = ExtResource("3_brj5g")
 theme_override_font_sizes/font_size = 35
 
 [node name="AnswerButton2" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 121.29)
+custom_minimum_size = Vector2(0, 187.74)
 layout_mode = 2
 theme = ExtResource("3_brj5g")
 theme_override_font_sizes/font_size = 35
 
 [node name="AnswerButton3" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 121.29)
+custom_minimum_size = Vector2(0, 187.74)
 layout_mode = 2
 theme = ExtResource("3_brj5g")
 theme_override_font_sizes/font_size = 35
 
 [node name="AnswerButton4" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 121.29)
+custom_minimum_size = Vector2(0, 187.74)
 layout_mode = 2
 theme = ExtResource("3_brj5g")
 theme_override_font_sizes/font_size = 35
@@ -183,3 +183,4 @@ texture = ExtResource("6_ohl6k")
 [connection signal="pressed" from="VBoxContainer/AnswerButton2" to="." method="_on_answer_button_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/AnswerButton3" to="." method="_on_answer_button_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/AnswerButton4" to="." method="_on_answer_button_1_pressed"]
+[connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]

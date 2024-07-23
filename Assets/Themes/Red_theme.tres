@@ -5,7 +5,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_thibk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gun3k"]
-bg_color = Color(0.796329, 0, 0.133835, 0.388235)
+bg_color = Color(0.880205, 0.000150457, 0.15198, 0.27451)
 border_width_bottom = 5
 border_color = Color(0.397801, 0, 0.203807, 0.419608)
 border_blend = true
@@ -33,7 +33,7 @@ anti_aliasing = false
 anti_aliasing_size = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cegie"]
-bg_color = Color(0.619608, 0, 0.0392157, 0.458824)
+bg_color = Color(0.619608, 0, 0.0392157, 0.52549)
 corner_radius_top_left = 130
 corner_radius_top_right = 130
 corner_radius_bottom_right = 130

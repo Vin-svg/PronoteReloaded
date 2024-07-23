@@ -41,6 +41,27 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_vtf7h")
 
+[node name="AMC" type="Button" parent="Interface/BoxContainer2/Panel"]
+layout_direction = 1
+layout_mode = 2
+offset_left = 45.0
+offset_top = 321.0
+offset_right = 950.0
+offset_bottom = 682.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.51
+theme = ExtResource("2_vtf7h")
+theme_override_font_sizes/font_size = 131
+text = "AMC"
+
+[node name="Click_sound" type="AudioStreamPlayer" parent="Interface/BoxContainer2/Panel/AMC"]
+stream = ExtResource("4_fun3d")
+volume_db = -6.0
+pitch_scale = 1.56
+autoplay = true
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Interface/BoxContainer2/Panel"]
 layout_mode = 1
 anchors_preset = 8
@@ -49,27 +70,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -449.0
-offset_top = -411.5
+offset_top = 49.5
 offset_right = 456.0
-offset_bottom = 265.5
+offset_bottom = 267.5
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
-
-[node name="AMC" type="Button" parent="Interface/BoxContainer2/Panel/VBoxContainer"]
-layout_direction = 1
-layout_mode = 2
-size_flags_vertical = 6
-size_flags_stretch_ratio = 0.51
-theme = ExtResource("2_vtf7h")
-theme_override_font_sizes/font_size = 131
-text = "AMC"
-
-[node name="Click_sound" type="AudioStreamPlayer" parent="Interface/BoxContainer2/Panel/VBoxContainer/AMC"]
-stream = ExtResource("4_fun3d")
-volume_db = -6.0
-pitch_scale = 1.56
-autoplay = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Interface/BoxContainer2/Panel/VBoxContainer"]
 layout_mode = 2
@@ -163,5 +169,5 @@ position = Vector2(107.585, 311.545)
 scale = Vector2(0.34, 0.34)
 texture = ExtResource("6_rapp6")
 
-[connection signal="pressed" from="Interface/BoxContainer2/Panel/VBoxContainer/AMC" to="." method="_on_amc_pressed"]
+[connection signal="pressed" from="Interface/BoxContainer2/Panel/AMC" to="." method="_on_amc_pressed"]
 [connection signal="pressed" from="Interface/BoxContainer/Options" to="." method="_on_options_pressed"]
