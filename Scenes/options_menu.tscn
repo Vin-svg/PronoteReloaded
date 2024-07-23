@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjm0kb61xb27t"]
 
-[ext_resource type="Theme" uid="uid://bjrncu1rigl6m" path="res://Assets/Themes/Blue_theme.tres" id="1_hdt0d"]
 [ext_resource type="Script" path="res://Scenes/options_menu.gd" id="1_stt8x"]
+[ext_resource type="Theme" uid="uid://og4f1aht655" path="res://Assets/Themes/Red_theme.tres" id="2_sfeko"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -50,7 +50,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
-theme = ExtResource("1_hdt0d")
+theme = ExtResource("2_sfeko")
 theme_override_font_sizes/font_size = 50
 text = "Back to menu"
 
@@ -74,7 +74,7 @@ offset_left = 105.0
 offset_top = 634.0
 offset_right = 933.0
 offset_bottom = 683.0
-theme = ExtResource("1_hdt0d")
+theme = ExtResource("2_sfeko")
 theme_override_font_sizes/font_size = 36
 text = "Volume"
 

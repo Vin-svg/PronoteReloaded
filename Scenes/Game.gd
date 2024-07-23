@@ -2,10 +2,8 @@ extends Control
 
 func _ready():
 	AudioPlayer.play_music_level()
-	
-	
-#BOUTON AMC
 
+#BOUTON AMC
 @onready var click_sound = $CanvasLayer/BoxContainer2/Panel/VBoxContainer/AMC/Click_sound
 
 func _on_amc_pressed():
@@ -16,5 +14,3 @@ func _on_amc_pressed():
 #BOUTON OPTIONS
 func _on_options_pressed():
 	get_tree().change_scene_to_file("res://Scenes/options_menu.tscn")
-	
-

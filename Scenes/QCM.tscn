@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfpn475c672xp"]
+[gd_scene load_steps=8 format=3 uid="uid://dfpn475c672xp"]
 
 [ext_resource type="Script" path="res://Scenes/QCM_script.gd" id="1_7f1di"]
 [ext_resource type="AudioStream" uid="uid://b6upo5qvq7pdr" path="res://Assets/Sounds (UI-Music)/Click.mp3" id="2_duap7"]
-[ext_resource type="Theme" uid="uid://bjrncu1rigl6m" path="res://Assets/Themes/Blue_theme.tres" id="3_yo1ek"]
+[ext_resource type="Theme" uid="uid://og4f1aht655" path="res://Assets/Themes/Red_theme.tres" id="3_brj5g"]
 [ext_resource type="AudioStream" uid="uid://dvyx36301seha" path="res://Assets/Sounds (UI-Music)/correct.mp3" id="4_4o72k"]
+[ext_resource type="FontFile" uid="uid://b14ms8rl1fy70" path="res://Assets/fonts/Montserrat-Medium.ttf" id="4_x5n80"]
 [ext_resource type="AudioStream" uid="uid://eyhuwrp6lxcl" path="res://Assets/Sounds (UI-Music)/wrong.mp3" id="5_7qyvl"]
+[ext_resource type="Texture2D" uid="uid://b1ti3etc75bwo" path="res://Assets/Textures/_upscayl_4x_realesrgan-x4plus-anime.png" id="6_ohl6k"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -23,12 +25,29 @@ autoplay = true
 [node name="QuestionLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 85.0
+offset_top = 138.0
 offset_right = 1075.0
 offset_bottom = 375.0
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 53
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="Panel2" type="Panel" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -859.0
+offset_top = -1110.0
+offset_right = 980.0
+offset_bottom = -852.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("3_brj5g")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -48,25 +67,25 @@ theme_override_constants/separation = 149
 [node name="AnswerButton1" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 121.29)
 layout_mode = 2
-theme = ExtResource("3_yo1ek")
+theme = ExtResource("3_brj5g")
 theme_override_font_sizes/font_size = 35
 
 [node name="AnswerButton2" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 121.29)
 layout_mode = 2
-theme = ExtResource("3_yo1ek")
+theme = ExtResource("3_brj5g")
 theme_override_font_sizes/font_size = 35
 
 [node name="AnswerButton3" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 121.29)
 layout_mode = 2
-theme = ExtResource("3_yo1ek")
+theme = ExtResource("3_brj5g")
 theme_override_font_sizes/font_size = 35
 
 [node name="AnswerButton4" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 121.29)
 layout_mode = 2
-theme = ExtResource("3_yo1ek")
+theme = ExtResource("3_brj5g")
 theme_override_font_sizes/font_size = 35
 
 [node name="FeedbackLabel" type="Label" parent="."]
@@ -77,28 +96,32 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -364.0
-offset_top = 511.0
+offset_top = 585.0
 offset_right = 404.0
 offset_bottom = 778.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_brj5g")
+theme_override_fonts/font = ExtResource("4_x5n80")
 theme_override_font_sizes/font_size = 91
 horizontal_alignment = 1
 
 [node name="Panel" type="Panel" parent="."]
-visible = false
+z_index = -1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -437.0
+offset_left = -486.5
 offset_top = -813.5
-offset_right = 437.0
+offset_right = 486.5
 offset_bottom = 813.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("3_brj5g")
 
 [node name="CountdownLabel" type="Label" parent="."]
 layout_mode = 0
@@ -125,7 +148,6 @@ stream = ExtResource("5_7qyvl")
 volume_db = -7.0
 
 [node name="BackToMenuButton" type="Button" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -138,8 +160,24 @@ offset_right = 244.0
 offset_bottom = 1075.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_brj5g")
 theme_override_font_sizes/font_size = 56
 text = "Back to Menu"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -409.0
+offset_top = -54.0
+offset_right = 391.0
+offset_bottom = 1634.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_ohl6k")
 
 [connection signal="pressed" from="VBoxContainer/AnswerButton1" to="." method="_on_answer_button_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/AnswerButton2" to="." method="_on_answer_button_1_pressed"]
